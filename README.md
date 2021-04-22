@@ -16,3 +16,7 @@ Note : `ux0:resavedata` directory and title id directory must be created by the 
 # Installation
 
 Add resavedata.skprx path to your config.txt.
+
+# Information
+
+reSavedata is participating in the [KyuHEN contest](<https://kyuhen.customprotocol.com/en/>).
