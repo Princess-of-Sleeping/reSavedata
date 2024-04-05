@@ -12,8 +12,8 @@ All game save data will be redirected to reSavedata folder.
 Example : `ux0:/data/resavedata/PCSG00001/`
 
 # Installation
-
-Add resavedata.skprx path to your config.txt.
+Put "resavedata.skprx" in *ux0:tai/* and add the following to your config.txt (under the KERNEL section, if you have one):
+***ux0:tai/resavedata.skprx***
 
 # Information
 
