@@ -73,20 +73,35 @@ int module_start(SceSize argc, const void *args){
 	}
 
 	switch(info.module_nid){
-	case 0xDBB29DB7: // 3.60
+	case 0x94CEFE4B: // 3.55 retail
+	case 0xDFBC288C: // 3.57 retail
+		HookOffset(info.modid, 0, 1, 0x17b74, sceAppMgrGetSavedataPath);
+		break;
+
+	case 0xDBB29DB7: // 3.60 retail
+	case 0xB5F8EA7C: // 3.61 retail
 		HookOffset(info.modid, 0, 1, 0x17904, sceAppMgrGetSavedataPath);
 		break;
-	case 0x1C9879D6: // 3.65
+
+	case 0x23B967C5: // 3.63 retail
+	case 0x1C9879D6: // 3.65 retail
 		HookOffset(info.modid, 0, 1, 0x17440, sceAppMgrGetSavedataPath);
 		break;
-	case 0x94CEFE4B: // 3.55
-	case 0x54E2E984: // 3.67
-	case 0xC3C538DE: // 3.68
-	case 0x321E4852: // 3.69
-	case 0x700DA0CD: // 3.70
-	case 0xF7846B4E: // 3.71
-	case 0xA8E80BA8: // 3.72
-	case 0xB299D195: // 3.73
+
+	case 0x54E2E984: // 3.67 retail
+	case 0xC3C538DE: // 3.68 retail
+		HookOffset(info.modid, 0, 1, 0x1744c, sceAppMgrGetSavedataPath);
+		break;
+
+	case 0x321E4852: // 3.69 retail
+	case 0x700DA0CD: // 3.70 retail
+	case 0xF7846B4E: // 3.71 retail
+	case 0xA8E80BA8: // 3.72 retail
+	case 0xB299D195: // 3.73 retail
+	case 0x30007BD3: // 3.74 retail
+		HookOffset(info.modid, 0, 1, 0x17474, sceAppMgrGetSavedataPath);
+		break;
+
 	default:
 		return SCE_KERNEL_START_FAILED;
 		break;
