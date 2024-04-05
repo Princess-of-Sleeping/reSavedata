@@ -76,8 +76,10 @@ int module_start(SceSize argc, const void *args){
 	case 0xDBB29DB7: // 3.60
 		HookOffset(info.modid, 0, 1, 0x17904, sceAppMgrGetSavedataPath);
 		break;
-	case 0x94CEFE4B: // 3.55
 	case 0x1C9879D6: // 3.65
+		HookOffset(info.modid, 0, 1, 0x17440, sceAppMgrGetSavedataPath);
+		break;
+	case 0x94CEFE4B: // 3.55
 	case 0x54E2E984: // 3.67
 	case 0xC3C538DE: // 3.68
 	case 0x321E4852: // 3.69
